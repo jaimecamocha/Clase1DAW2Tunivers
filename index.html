@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Prueba inicia del primer dia de DWEC">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba inicial</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>PÁGINA INICIAL</h1>
+    <h2>Subtítulo</h2>
+    <div><button type="button" id="cambiarColorBtn">Cambiar color de fondo</button></div>
+    <a href="contacto.html">IR A CONTACTO</a>
+
+    <script>
+        // Función para cambiar el color de fondo de la pantalla
+        function cambiarColorFondoPantalla() {
+          // Generar un color aleatorio en formato hexadecimal
+          var nuevoColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+          
+          // Cambiar el color de fondo del elemento <body>
+          document.body.style.backgroundColor = nuevoColor;
+        }
+      
+        // Agregar un evento clic al botón
+        var botonCambiarColor = document.getElementById("cambiarColorBtn");
+        botonCambiarColor.addEventListener("click", cambiarColorFondoPantalla);
+      </script>  
+</body>
+</html>
